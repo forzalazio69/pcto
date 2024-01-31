@@ -1,5 +1,5 @@
 #include <stdio.h>
-void VocaleConsonante()
+int main()
 {
     printf("inserisci un numero\n");
     float x;
@@ -9,10 +9,11 @@ void VocaleConsonante()
     scanf(" %f", &y);
     printf("quale operazione vuoi eseguire tra questi due numeri?\n scegli tra + - * /\n");
     char z; 
-    scanf(" %f",z);
+    scanf(" %c", &z);
     float n=x+y;
     float m=x-y;
     float l=x*y;
+    float p=x/y;
 
     if(z=='+')
     {
@@ -26,14 +27,12 @@ void VocaleConsonante()
     {
         printf("il prodotto tra i due numeri è %f\n",l);
     }
+    else if (z=='/')
+    {
+        printf("il quoziente tra i due numeri è %f\n",p);
+    }
     
      
-}
-int main ()
-{
-    VocaleConsonante();
-    VocaleConsonante();
-    VocaleConsonante();
-    VocaleConsonante();
+
 return(0);
 }
