@@ -1,4 +1,8 @@
 #include <stdio.h>
+
+
+
+
 int main()
 {
     printf("insersci la lunghezza di un lato di un triangolo\n");

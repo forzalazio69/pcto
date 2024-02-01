@@ -1,21 +1,24 @@
 #include <stdio.h>
 
-double radiceQuadrata(double numero) {
-  double approssimazione = numero / 2.0;
-  double differenza = numero - approssimazione * approssimazione;
-  while (differenza > 0.00001) {
-    approssimazione = (approssimazione + numero / approssimazione) / 2.0;
-    differenza = numero - approssimazione * approssimazione;
-  }
-  return approssimazione;
+float risultatoarea(float areasenzaradice)
+{
+
+
+    float temp, sqrt;
+
+    sqrt = areasenzaradice / 2;
+    temp = 0;
+
+    while(sqrt != temp){
+        
+        temp = sqrt;
+
+        
+        sqrt = ( areasenzaradice/temp + temp) / 2;
+    }
+      return sqrt;
 }
 
-int main() {
-  double numero = 10.89;
-  double risultato = radiceQuadrata(num);
-  printf("La radice quadrata di %lf è %lf", numero, risultato);
-  return 0;
-}
 int main()
 {
     printf("insersci la lunghezza di un lato di un triangolo\n");
@@ -28,15 +31,16 @@ int main()
     float numero3;
     scanf("%f", &numero3);
     float Perimetro;
-    Perimetro=n+numero3+numero3;
+    Perimetro=n+numero2+numero3;
     printf("il perimetro del triangolo è %f\n" ,Perimetro);
-    float Semiperimetro;
-    Semiperimetro= Perimetro/2;
-    float Area;
-    double numero (Semiperimetro *(Semiperimetro-n)*(Semiperimetro-numero2)*(Semiperimetro-numero3));
-    double risultato= radiceQuadrata (numero);
-    printf("l'area del triangolo è %lf\n" ,risultato);
-
+    float semiperimetro;
+    semiperimetro=Perimetro/2;
+     float areasenzaradice;
+    areasenzaradice= (semiperimetro*(semiperimetro-n)*(semiperimetro-numero2)*(semiperimetro-numero3));
+    
+    float area;
+    area=risultatoarea(areasenzaradice);
+    printf("l'area del triangolo è %f\n",area);
 
      return(0);
 }
